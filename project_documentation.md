@@ -7,23 +7,23 @@ Below is the detailed status of each requirement from the task list.
 | Requirement | Status | Details |
 | :--- | :---: | :--- |
 | **Step 1: Make It Work** | | |
-| Create Flask API with `/run` endpoint | ✅ Done | Implemented in `app.py` |
-| Take Python code as input | ✅ Done | Accepts JSON `{ "code": "..." }` |
-| Run code in Docker | ✅ Done | Uses `docker run python:3.11-slim` |
-| Return output | ✅ Done | Returns `{ "output": "..." }` |
+| Create Flask API with `/run` endpoint | Implemented in `app.py` |
+| Take Python code as input  | Accepts JSON `{ "code": "..." }` |
+| Run code in Docker  | Uses `docker run python:3.11-slim` |
+| Return output  | Returns `{ "output": "..." }` |
 | **Step 2: Add Basic Safety** | | |
-| Stop infinite loops (Timeout 10s) | ✅ Done | Implemented logic for 5s timeout (stricter than requested) |
-| Limit memory (128mb) | ✅ Done | Added `--memory 128m` flag |
-| Block internet access | ✅ Done | Added `--network none` flag |
+| Stop infinite loops (Timeout 10s)  | Implemented logic for 5s timeout (stricter than requested) |
+| Limit memory (128mb)  | Added `--memory 128m` flag |
+| Block internet access  | Added `--network none` flag |
 | **Step 3: Docker Security** | | |
-| Experiment: Read `/etc/passwd` | ✅ Done | Can read system files (expected behavior without user namespaces) |
-| Experiment: Write to `/tmp` | ✅ Done | Defaults to writable. Can be secured with `--read-only` |
-| Report findings | ✅ Done | Included in this document |
+| Experiment: Read `/etc/passwd`  | Can read system files (expected behavior without user namespaces) |
+| Experiment: Write to `/tmp`  | Defaults to writable. Can be secured with `--read-only` |
+| Report findings | Included in this document |
 | **Step 4: Polish & Document** | | |
-| Better error messages | ✅ Done | Returns specific timeout/server errors |
-| Limit code length (5000 chars) | ✅ Done | Added validation in `app.py` |
-| Simple Web UI | ✅ Done | `templates/index.html` created |
-| Documentation | ✅ Done | This file |
+| Better error messages  | Returns specific timeout/server errors |
+| Limit code length (5000 chars)  | Added validation in `app.py` |
+| Simple Web UI  | `templates/index.html` created |
+| Documentation  | This file |
 
 ---
 
