@@ -59,13 +59,13 @@ You can use Postman to test the API.
 **Body (JSON):**
 ```json
 {
-  "code": "print('Hello from Postman')"
+  "code": "print('Hello World')"
 }
 ```
 **Expected Response:**
 ```json
 {
-  "output": "Hello from Postman"
+  "output": "Hello World"
 }
 ```
 
@@ -73,13 +73,13 @@ You can use Postman to test the API.
 **Body (JSON):**
 ```json
 {
-  "code": "print(10 + 20)"
+  "code": "print(2 + 2)"
 }
 ```
 **Expected Response:**
 ```json
 {
-  "output": "30"
+  "output": "4"
 }
 ```
 
@@ -93,24 +93,9 @@ You can use Postman to test the API.
 **Expected Response:**
 ```json
 {
-  "error": "Execution timed out after 5 seconds"
+  "error": "Execution timed out after 10 seconds"
 }
-```
 
----
-
-## 4. Screenshot Guide
-
-Take screenshots of the following to prove your work:
-
-1.  **Project Files**: Screenshot your VS Code file explorer or the folder structure.
-2.  **Web UI**: Open `http://localhost:5000` in a browser, type `print("Hello UI")`, click Run, and screenshot the result.
-3.  **Postman Success**: Screenshot a successful `POST /run` request with `print("Hello")`.
-4.  **Postman Security**: Screenshot the "Infinite Loop" test showing the **Timeout Error**.
-5.  **Terminal Output**: Run `python verify_security.py` and screenshot the "Testing..." output in your terminal.
-6.  **Docker Command**: Screenshot the `app.py` file code showing the `docker run` command lines (lines ~30-40) to prove you added security flags (`--network none`, `--memory 128m`).
-
----
 
 ## 5. What I Learned (Project Takeaways)
 
